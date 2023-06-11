@@ -38,4 +38,4 @@ function result(method, params) {
 
 }
 
-export default result;
+export {result};
