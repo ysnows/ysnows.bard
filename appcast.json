@@ -2,6 +2,12 @@
   "identifier": "ysnows.bard",
   "versions": [
     {
+      "version": "0.0.5",
+      "desc": "feat: 1. zip",
+      "url": "https://github.com/ysnows/ysnows.bard/releases/download/v0.0.5/ysnows.bard.enconvoplugin",
+      "minAppVersion": "1.2.1"
+    },
+    {
       "version": "0.0.4",
       "desc": "feat: 1. bard",
       "url": "https://github.com/ysnows/ysnows.bard/releases/download/v0.0.4/ysnows.bard.enconvoplugin",
