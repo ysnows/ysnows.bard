@@ -5,7 +5,7 @@ import {result} from "./enconvo.js";
 const args = process.argv.slice(2);
 const {$option} = JSON.parse(args[0]);
 
-let cookies = `__Secure-1PSID=WwiZu_MTinPnWs8CLduao28QFippa8UrB3R1ZJjLRC2N9zz4Q5f3K2irMn9rohnysFbO1w.`;
+let cookies = $option.cookies;
 let bot = new Bard(cookies, {
     inMemory: false,
     savePath: "./conversations.json",
@@ -47,8 +47,7 @@ const end = {
 
 console.log("begin")
 let resp = await result("result", [response])
-console.log(resp+"kkk")
-
+console.log(resp + "kkk")
 
 
 process.exit()

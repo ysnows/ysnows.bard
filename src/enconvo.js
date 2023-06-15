@@ -8,7 +8,7 @@ function result(method, params) {
 
         const options = {
             hostname: '127.0.0.1', // 您的服务器地址
-            port: 8080, // 服务器端口
+            port: 18080, // 服务器端口
             path: '', // 请求路径
             method: 'POST', // 使用 POST 方法
             headers: {

@@ -17,9 +17,9 @@ flowType: llmEngine
 options:
   - title: Model Settings
     items:
-      - identifier: cookie
+      - identifier: cookies
         type: text
-        title: Cookie
+        title: Cookies
         defaultValue:
         menuValues: [ ]
         desc: ''
