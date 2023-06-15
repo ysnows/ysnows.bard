@@ -24,7 +24,7 @@ jobs:
         run: npm run build
       # 将dist目录打成zip包
       - name: Zip Dist
-        run: zip -r $ZIP_NAME ./dist/*
+        run: cd dist && zip -r ../$ZIP_NAME ./*
       # 创建Release
       - name: Create Release
         id: create_release
