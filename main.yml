@@ -26,5 +26,14 @@ options:
         placeholderText: "__Secure-{account_number}PSID"
         tip: '__Secure-{account_number}PSID'
         textWidth: 3.6e+2
+      - identifier: proxy
+        type: text
+        title: Proxy
+        defaultValue:
+        menuValues: [ ]
+        desc: ''
+        placeholderText: "http://127.0.0.1:7890"
+        tip: ''
+        textWidth: 3.6e+2
 
     desc: "\u9009\u62E9\u5BF9\u5E94\u8BED\u8A00\u7684\u8BED\u97F3"

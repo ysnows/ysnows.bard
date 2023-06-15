@@ -3,17 +3,26 @@ import {result} from "./enconvo.js";
 
 
 const args = process.argv.slice(2);
-const {$option} = JSON.parse(args[0]);
+const {$option,text} = JSON.parse(args[0]);
 
 let cookies = $option.cookies;
+let proxyUrl = $option.proxy;
+// 把proxy(http://127.0.0.1:7890)， 解析成对象（host, port, protocol）
+let proxyObj = null;
+if (proxyUrl) {
+    let proxy = new URL(proxyUrl);
+    proxyObj = {
+        host: proxy.hostname,
+        port: proxy.port,
+        protocol: proxy.protocol.slice(0, -1),
+    };
+}
+console.log(proxyObj)
+
 let bot = new Bard(cookies, {
     inMemory: false,
     savePath: "./conversations.json",
-    proxy: {
-        host: '127.0.0.1',
-        port: '7890',
-        protocol: "http",
-    },
+    proxy: proxyObj,
 });
 
 let conversationId = "some_random_id"; // optional: to make it remember the conversation
@@ -31,7 +40,7 @@ await bot.askStream(
         console.log(resp)
         response += res
     }, // returns the response
-    $option.text,
+    text,
     conversationId,
 );
 
